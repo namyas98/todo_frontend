@@ -4,6 +4,7 @@ import { getTasks, createTask, updateTask, deleteTask } from "../../api/tasksApi
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react'
+import {descendingSort} from './descendingSort'
 
 const TodoList = () => {
     const [newTask, setNewTask] = useState('')
@@ -15,7 +16,12 @@ const TodoList = () => {
         error,
         data: tasks
     } = useQuery('tasks', getTasks, {
+        select: data => data.sort((x,y) =>{
+            return descendingSort(x,y);
+        })
+        
     })
+    
 
     const addMutation = useMutation(createTask, {
         onSuccess: () => {
