@@ -1,4 +1,4 @@
-const API_ENDPOINT_URL = "http://localhost:4000/tasks"
+const API_ENDPOINT_URL = "https://todoapi-ml57.onrender.com/tasks"
 
 export const getTasks = async () => {
     const data = await fetch(API_ENDPOINT_URL, {method: "GET"});
