@@ -1,7 +1,7 @@
 import TodoList from "./features/TodoList/TodoList"
-
+import {useTitle} from './features/useTitle'
 function App() {
-  useTitle('ToDo List')
+  useTitle()
   return (
     <TodoList/>
   )
