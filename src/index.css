@@ -3,6 +3,8 @@ body {
   font-size: 20pt;
   background-color: hsl(246, 12%, 45%);
   color: #193dcced;
+  display: flex;
+  justify-content: center;
 }
 
 input[type="text"], button {
@@ -22,9 +24,9 @@ main {
   border-radius: 10px;
   box-shadow: 5px #1d2c4f;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   min-height: 800px;
-  margin: 20px;
+  min-width: 800px;
 }
 
 h1 {
